@@ -1,0 +1,1 @@
+export {default as UiNavbarVertical} from './ui-navbar-vertical'

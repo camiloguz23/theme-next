@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 30px;
+  margin-top: 90px;
+
+  .item {
+    font-size: 22px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px 0px 0px 30px;
+    width: 90%;
+    position: relative;
+    text-decoration: none;
+    gap: 8px;
+    transition: .5s;
+
+    &.active {
+      background-color: var(--primary);
+    }
+
+    &.active::before,
+    &.active::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 0;
+      border-radius: 30%;
+      z-index: 0;
+    }
+
+    &.active::before {
+      top: -28px;
+      box-shadow: 10px 10px 0 10px var(--primary);
+      border-radius: 0 0 100vw 0;
+    }
+
+    &.active::after {
+      bottom: -28px;
+      border-radius: 0 100vw 00;
+      box-shadow: 10px -10px 0 10px var(--primary);
+    }
+  }
+}
