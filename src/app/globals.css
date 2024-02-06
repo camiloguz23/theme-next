@@ -43,4 +43,9 @@ body {
 
 button {
   background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border: none;
 }

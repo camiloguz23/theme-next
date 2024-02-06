@@ -13,11 +13,11 @@ interface Props {
 function UiNavbar({ links, isCollapse }: Props) {
   const pathname = usePathname();
   return (
-    <nav className={style.navbar}>
+    <nav className={`${style.navbar} ${isCollapse ? style.close : style.open}`}>
       {links.map((item) => (
         <Link
           key={item.title}
-          className={`${style.item} ${pathname === item.path && style.active}`}
+          className={`${style.item} ${pathname === item.path && style.active} `}
           href={item.path}
         >
           <UiIcon nameIcon={item.icons} /> {isCollapse || item.title}

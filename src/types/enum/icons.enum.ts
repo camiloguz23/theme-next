@@ -5,4 +5,5 @@ export enum IconsEnum {
   store = "store",
   about = "person_search",
   menu = "menu",
+  close = "close",
 }

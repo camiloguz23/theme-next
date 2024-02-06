@@ -19,12 +19,18 @@ function UiNavbarVertical({ children }: Prop) {
           navBar.value ? style.collapse : style.expand
         }`}
       >
-        <span
+        <button
           className={`material-symbols-outlined ${style.icon}`}
           onClick={navBar.onToggle}
         >
           {navBar.value ? IconsEnum.arrowOpen : IconsEnum.arrowBack}
-        </span>
+        </button>
+        <button
+          className={`material-symbols-outlined ${style.icon} ${style.mobile}`}
+          onClick={navBar.onToggle}
+        >
+          {navBar.value ? IconsEnum.menu : IconsEnum.close}
+        </button>
 
         <UiNavbar links={ROUTES} isCollapse={navBar.value} />
       </header>
