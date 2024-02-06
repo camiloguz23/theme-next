@@ -1,9 +1,13 @@
-"use serve";
+"use server";
 
 import { ENDPOINT } from "@/constants";
+import { messageSnacbar } from "@/constants/message-snackbar";
+import { revalidateTag } from "next/cache";
+import { resolve } from "path";
 
-export const getOnlyProducts = async (number: number) => {
-  fetch(ENDPOINT.getProducts, {
+export const getOnlyProducts = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  const response = await fetch(ENDPOINT.getProducts, {
     method: "POST",
     body: JSON.stringify({
       title: "test camilo",
@@ -13,4 +17,9 @@ export const getOnlyProducts = async (number: number) => {
       category: "electronic",
     }),
   });
+  const data = response;
+  if (data.ok) {
+    revalidateTag("products");
+  }
+  return messageSnacbar[data.status];
 };

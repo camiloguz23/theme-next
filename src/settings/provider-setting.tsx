@@ -1,5 +1,6 @@
 "use client";
 
+import { SnackbarProvider } from "notistack";
 import { useSettings } from "./use-settings";
 
 interface Prop {
@@ -8,7 +9,11 @@ interface Prop {
 
 function ProviderSetting({ children }: Prop) {
   const { valueMode } = useSettings();
-  return <main data-theme={valueMode}>{children}</main>;
+  return (
+    <SnackbarProvider>
+      <main data-theme={valueMode}>{children}</main>;
+    </SnackbarProvider>
+  );
 }
 
 export default ProviderSetting;

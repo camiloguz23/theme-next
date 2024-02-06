@@ -1,3 +1,3 @@
 export const ENDPOINT = {
-    getProducts : 'https://fakestoreapi.com/products'
-}
+  getProducts: "https://fakestoreapi.com/products",
+};
