@@ -1,0 +1,20 @@
+.contentDrawer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  display: flex;
+  justify-content: end;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: auto;
+
+  .drawer {
+    padding: 6px;
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: var(--secondary);
+  }
+}

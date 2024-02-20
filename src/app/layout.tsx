@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ProviderSetting } from "@/settings";
 import { UiHeader } from "@/layout";
+import { ProviderCustom } from "@/shared";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body>
-        <ProviderSetting>
-          <UiHeader>{children}</UiHeader>
-        </ProviderSetting>
+        <ProviderCustom>
+          <ProviderSetting>
+            <UiHeader>{children}</UiHeader>
+          </ProviderSetting>
+        </ProviderCustom>
       </body>
     </html>
   );

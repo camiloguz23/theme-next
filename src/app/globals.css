@@ -36,11 +36,6 @@
   font-size: var(--roboto);
 }
 
-body {
-  background-color: var(--primary);
-  height: 100vh;
-}
-
 button {
   background-color: var(--secondary);
 }

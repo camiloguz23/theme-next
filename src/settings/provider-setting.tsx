@@ -2,6 +2,7 @@
 
 import { SnackbarProvider } from "notistack";
 import { useSettings } from "./use-settings";
+import style from "./setting.module.css";
 
 interface Prop {
   children: React.ReactNode;
@@ -11,7 +12,10 @@ function ProviderSetting({ children }: Prop) {
   const { valueMode } = useSettings();
   return (
     <SnackbarProvider>
-      <main data-theme={valueMode}>{children}</main>;
+      <main className={style.main} data-theme={valueMode}>
+        {children}
+      </main>
+      ;
     </SnackbarProvider>
   );
 }
