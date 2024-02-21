@@ -1,4 +1,4 @@
 export interface SnackOptionInterfaces {
   message: string;
-  variant: "success" | "default" | "error" | "warning" | "info";
+  variant: 'success' | 'default' | 'error' | 'warning' | 'info';
 }

@@ -1,2 +1,2 @@
-export * from "./type-mode";
-export * from "./links-model";
+export * from './type-mode';
+export * from './links-model';

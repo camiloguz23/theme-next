@@ -1,2 +1,13 @@
-.containerPopover {
+.btnPopover {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 4px;
 }

@@ -1,0 +1,25 @@
+.header {
+    background-color: var(--secondary);
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+    padding-top: 10px;
+  
+    &.expand {
+      width: 300px;
+    }
+  
+    &.collapse {
+      width: 85px;
+    }
+  
+    .icon {
+      cursor: pointer;
+      color: var(--text);
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      padding: 1px;
+      font-size: 20px;
+    }
+  }
+  

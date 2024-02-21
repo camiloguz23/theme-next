@@ -1,1 +1,1 @@
-export type TypeMode = "primary" | "secondary" | "cold" | "dark";
+export type TypeMode = 'primary' | 'secondary' | 'cold' | 'dark';

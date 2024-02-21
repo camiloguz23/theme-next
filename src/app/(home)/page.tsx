@@ -1,11 +1,7 @@
-import { ENDPOINT } from "@/constants";
-import styles from "./page.module.css";
-import UiBtn from "@/components/btn/ui-btn";
-import { BtnSettings } from "@/components";
+import styles from './page.module.css';
+import { BtnSettings } from '@/components';
 
-
-export default async function Home() {
-
+export default function Home(): JSX.Element {
   return (
     <main className={styles.main}>
       <BtnSettings />

@@ -1,7 +1,6 @@
-"use client";
+'use client';
 
-import React from "react";
-import style from "./ui-drawer.module.css";
+import style from './ui-drawer.module.css';
 
 interface PropsDrawer {
   children: React.ReactNode;
@@ -9,16 +8,19 @@ interface PropsDrawer {
   open: boolean;
 }
 
-export const UiDrawer = ({ children, onClose, open }: PropsDrawer) => {
+export const UiDrawer = ({ children, onClose, open }: PropsDrawer): JSX.Element => {
   return (
     <>
       {open && (
-        <div className={style.contentDrawer} onClick={(e) => {
-          const element = e.target as HTMLDivElement
-          const className = element.classList.value
-          className.includes('content') && onClose()
-        }}>
-          <div className={style.drawer} >{children}</div>
+        <div
+          className={style.contentDrawer}
+          onClick={(e) => {
+            const element = e.target as HTMLDivElement;
+            const className = element.classList.value;
+            className.includes('content') && onClose();
+          }}
+        >
+          <div className={style.drawer}>{children}</div>
         </div>
       )}
     </>

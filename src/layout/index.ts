@@ -1,1 +1,1 @@
-export { default as UiHeader } from "./header/ui-header";
+export * from './sidebar-layout';

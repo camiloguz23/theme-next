@@ -1,7 +1,7 @@
-import { IconsEnum } from "../enum";
+import { type IconsEnum } from '../enum';
 
 export interface LinksModel {
-    title:string,
-    icons: IconsEnum,
-    path:string
+  title: string;
+  icons: IconsEnum;
+  path: string;
 }

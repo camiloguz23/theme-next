@@ -1,21 +1,27 @@
-"use client";
+'use client';
 
-import { RootState } from "@/store";
-import { setTheme } from "@/store/slice/themeSettings";
-import { TypeMode } from "@/types";
-import { useDispatch, useSelector } from "react-redux";
+import { type RootState } from '@/store';
+import { setTheme } from '@/store/slice/themeSettings';
+import { useDispatch, useSelector } from 'react-redux';
+import { type ThemesType } from '@/types/types';
 
-export const useSettings = () => {
+interface ReturnData {
+  valueMode: ThemesType;
+  setModeTheme: (theme: ThemesType) => void;
+  themeList: ThemesType[];
+}
+
+export const useSettings = (): ReturnData => {
   const { theme } = useSelector((state: RootState) => state.theme);
   const dispatch = useDispatch();
-  const setModeUi = (value: TypeMode) => {
+  const setModeTheme = (value: ThemesType): void => {
     dispatch(setTheme(value));
   };
-  const getModeList: TypeMode[] = ["primary", "cold", "dark", "secondary"];
+  const themeList: ThemesType[] = ['dark', 'light'];
 
   return {
     valueMode: theme,
-    setModeUi,
-    getModeList,
+    setModeTheme,
+    themeList
   };
 };

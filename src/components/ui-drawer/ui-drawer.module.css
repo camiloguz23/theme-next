@@ -1,7 +1,7 @@
 .contentDrawer {
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: hsla(0, 0%, 0%, 0.3);
   display: flex;
   justify-content: end;

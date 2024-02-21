@@ -1,16 +1,14 @@
-"use client";
+'use client';
 
-import { getOnlyProducts } from "@/actions/ricky-and-morty.actions";
-import { useQueryAction } from "@/hooks";
+import { getOnlyProducts } from '@/actions/ricky-and-morty.actions';
+import { useQueryAction } from '@/hooks';
 
-function UiBtn() {
+function UiBtn(): JSX.Element {
   const { addProduct, isLoading } = useQueryAction({
-    queryFn: getOnlyProducts,
+    queryFn: getOnlyProducts
   });
 
-  return (
-    <button onClick={addProduct}>{isLoading ? "cargando" : "crear"}</button>
-  );
+  return <button onClick={addProduct}>{isLoading ? 'cargando' : 'crear'}</button>;
 }
 
 export default UiBtn;

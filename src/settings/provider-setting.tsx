@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { SnackbarProvider } from "notistack";
-import { useSettings } from "./use-settings";
-import style from "./setting.module.css";
+import { SnackbarProvider } from 'notistack';
+import { useSettings } from './use-settings';
+import style from './setting.module.css';
 
 interface Prop {
   children: React.ReactNode;
 }
 
-function ProviderSetting({ children }: Prop) {
+function ProviderSetting({ children }: Prop): JSX.Element {
   const { valueMode } = useSettings();
   return (
     <SnackbarProvider>

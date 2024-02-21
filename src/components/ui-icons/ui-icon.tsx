@@ -1,5 +1,5 @@
-import { IconsEnum } from "@/types/enum";
-import React, { CSSProperties } from "react";
+import { type IconsEnum } from '@/types/enum';
+import { type CSSProperties } from 'react';
 
 interface Props {
   nameIcon: IconsEnum;
@@ -8,13 +8,9 @@ interface Props {
   className?: string;
 }
 
-function UIcon({ nameIcon, onClick, style, className }: Props) {
+function UIcon({ nameIcon, onClick, style, className }: Props): JSX.Element {
   return (
-    <span
-      className={`material-symbols-outlined ${className}`}
-      onClick={onClick}
-      style={style}
-    >
+    <span className={`material-symbols-outlined ${className}`} onClick={onClick} style={style}>
       {nameIcon}
     </span>
   );

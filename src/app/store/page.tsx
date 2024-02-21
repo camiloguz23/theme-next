@@ -1,6 +1,4 @@
-import React from "react";
-
-function Store() {
+function Store(): JSX.Element {
   return <div>Store</div>;
 }
 
