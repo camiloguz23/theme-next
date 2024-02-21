@@ -3,29 +3,15 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: space-between;
     padding: 6px;
+    height: 100%;
 
-    .contentModeTheme {
+    .contentItem {
         display: flex;
-        justify-content: space-around;
-        width: 80%;
-
-        .iconMode {
-            font-size: 45px;
-            border-radius: 10px;
-            padding: 10px;
-            cursor: pointer;
-
-            &.active {
-                background-color: var(--hover);
-            }
-        }
-        @media (hover: hover) {
-            .iconMode:hover {
-                background-color: var(--hover);
-            }
-        }
-
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+        height: 100%;
     }
 }

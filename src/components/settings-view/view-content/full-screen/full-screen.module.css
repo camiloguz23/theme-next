@@ -1,0 +1,7 @@
+.btnFullScreen {
+    width: 60%;
+    box-shadow: 1px 1px 18px 1px var(--hover);
+    border: 1px var(--hover) solid;
+    margin-top: auto;
+    margin-bottom: 10px;
+}

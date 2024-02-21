@@ -7,5 +7,7 @@ export enum IconsEnum {
   menu = 'menu',
   settings = 'settings',
   darkMode = 'dark_mode',
-  lightMode = 'light_mode'
+  lightMode = 'light_mode',
+  fullScreen = 'fullscreen',
+  fullScreenExit = 'fullscreen_exit'
 }

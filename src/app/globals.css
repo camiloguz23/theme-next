@@ -45,4 +45,8 @@ body {
 button {
     background-color: var(--btnBg);
     color: var(--btnText);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
