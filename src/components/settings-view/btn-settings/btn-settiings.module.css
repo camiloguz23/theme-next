@@ -10,4 +10,8 @@
   border-radius: 50%;
   cursor: pointer;
   padding: 4px;
+
+  .btnSetting {
+    color: var(--btnText);
+  }
 }

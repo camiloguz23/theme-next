@@ -6,18 +6,19 @@ import { IconsEnum } from '@/types/enum';
 import { useBoolean } from '@/hook';
 import { useSettings } from '@/settings';
 import { UiDrawer } from '@/components/ui-drawer';
+import { UiViewContentSettings } from '@/components/settings-view/view-content';
 
 export const BtnSettings = (): JSX.Element => {
-  const { getModeList, setModeUi } = useSettings();
+  const { setModeTheme, valueMode } = useSettings();
 
   const openPopover = useBoolean();
   return (
     <>
       <button type='button' onClick={openPopover.onTrue} className={style.btnPopover}>
-        <UiIcon nameIcon={IconsEnum.settings} />
+        <UiIcon nameIcon={IconsEnum.settings} className={style.btnSetting} />
       </button>
       <UiDrawer open={openPopover.value} onClose={openPopover.onFalse}>
-        <p>ejemplo</p>
+        <UiViewContentSettings onSelectTheme={setModeTheme} theme={valueMode} />
       </UiDrawer>
     </>
   );

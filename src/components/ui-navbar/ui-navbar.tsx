@@ -15,7 +15,7 @@ function UiNavbar({ links, isCollapse }: Props): JSX.Element {
     <nav className={style.navbar}>
       {links.map((item) => (
         <Link key={item.title} className={`${style.item} ${pathname === item.path && style.active}`} href={item.path}>
-          <UiIcon nameIcon={item.icons} /> {isCollapse ?? item.title}
+          <UiIcon nameIcon={item.icons} /> {(isCollapse === true) || item.title}
         </Link>
       ))}
     </nav>

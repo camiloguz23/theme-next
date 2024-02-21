@@ -6,6 +6,7 @@ interface ReturnState {
   onTrue: () => void;
   onToggle: () => void;
   onFalse: () => void;
+  value: boolean;
 }
 
 export const useBoolean = (): ReturnState => {
