@@ -18,7 +18,7 @@ export const UiFullScreen = (): JSX.Element => {
   };
   return (
     <button className={style.btnFullScreen} onClick={onFullScreen}>
-      <UIcon nameIcon={isFullScreen.value ? IconsEnum.fullScreenExit : IconsEnum.fullScreen} />
+      <UIcon nameIcon={isFullScreen.value ? IconsEnum.fullScreenExit : IconsEnum.fullScreen} className={style.icon} />
     </button>
   );
 };

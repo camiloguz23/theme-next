@@ -4,7 +4,7 @@ import './globals.css';
 import { ProviderSetting } from '@/settings';
 import { UiSidebarLayout } from '@/layout';
 import { ProviderCustom } from '@/shared';
-import { UiHeader } from '@/components';
+import { BtnSettings, UiHeader } from '@/components';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
         <ProviderCustom>
           <ProviderSetting>
             <UiSidebarLayout header={<UiHeader />} content={children} />
+            <BtnSettings />
           </ProviderSetting>
         </ProviderCustom>
       </body>

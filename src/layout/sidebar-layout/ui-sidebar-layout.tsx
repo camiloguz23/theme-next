@@ -10,6 +10,9 @@ export const UiSidebarLayout = ({ content, header }: PropsSidebarLayout): JSX.El
   return (
     <main className={style.layout}>
       <header className={style.header}>{header}</header>
+      <div className={style.nav}>
+        <p>page</p>
+      </div>
       <div className={style.body}>{content}</div>
     </main>
   );
