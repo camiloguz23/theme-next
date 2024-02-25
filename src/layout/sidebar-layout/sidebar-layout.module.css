@@ -5,8 +5,8 @@
 
   display: grid;
   grid:
-    "header nav" auto
-    "header body" 1fr
+    'header nav' auto
+    'header body' 1fr
     / auto 1fr;
   gap: 8px;
 
@@ -20,5 +20,6 @@
 
   .body {
     grid-area: body;
+    margin-left: 30px;
   }
 }

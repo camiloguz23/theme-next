@@ -1,22 +1,28 @@
 .contentModeTheme {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+
+  .iconMode {
+    font-size: 45px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
     display: flex;
-    justify-content: space-around;
-    width: 80%;
-
-    .iconMode {
-        font-size: 45px;
-        border-radius: 10px;
-        padding: 10px;
-        cursor: pointer;
-
-        &.active {
-            background-color: var(--hover);
-        }
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .iconMode:hover {
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+  }
+  .active {
+    background-color: var(--hover);
+  }
+  @media (hover: hover) {
+    .iconMode:hover {
+      background-color: var(--hover);
     }
-        @media (hover: hover) {
-        .iconMode:hover {
-            background-color: var(--hover);
-        }
-    }
-
+  }
 }

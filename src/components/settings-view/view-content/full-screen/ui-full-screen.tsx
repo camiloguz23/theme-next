@@ -1,9 +1,8 @@
 'use client';
 
-import UIcon from '@/components/ui-icons/ui-icon';
-import { IconsEnum } from '@/types';
 import style from './full-screen.module.css';
 import { useBoolean } from '@/hook';
+import { Icons } from '@/components';
 
 export const UiFullScreen = (): JSX.Element => {
   const isFullScreen = useBoolean();
@@ -18,7 +17,7 @@ export const UiFullScreen = (): JSX.Element => {
   };
   return (
     <button className={style.btnFullScreen} onClick={onFullScreen}>
-      <UIcon nameIcon={isFullScreen.value ? IconsEnum.fullScreenExit : IconsEnum.fullScreen} className={style.icon} />
+      <Icons.FullsScreen open={isFullScreen.value ?? false} className={style.icon} />
     </button>
   );
 };

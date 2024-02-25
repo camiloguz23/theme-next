@@ -15,3 +15,13 @@
     color: var(--btnText);
   }
 }
+
+.btnPopover:hover {
+  animation: round 2s linear infinite;
+}
+
+@keyframes round {
+  to {
+    transform: rotate(360deg);
+  }
+}

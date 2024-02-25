@@ -1,1 +1,2 @@
-export * from './themes.type'
+export * from './themes.type';
+export * from './flags-type';

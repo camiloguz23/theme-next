@@ -6,11 +6,11 @@ interface ReturnState {
   onTrue: () => void;
   onToggle: () => void;
   onFalse: () => void;
-  value: boolean;
+  value: boolean | null;
 }
 
 export const useBoolean = (): ReturnState => {
-  const [value, setValue] = useState<boolean>(false);
+  const [value, setValue] = useState<boolean | null>(null);
 
   const onTrue = (): void => {
     setValue(true);
@@ -19,7 +19,7 @@ export const useBoolean = (): ReturnState => {
     setValue(false);
   };
   const onToggle = (): void => {
-    setValue(!value);
+    setValue(!(value ?? false));
   };
 
   return {

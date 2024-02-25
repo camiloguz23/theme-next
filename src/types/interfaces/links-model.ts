@@ -1,7 +1,5 @@
-import { type IconsEnum } from '../enum';
-
 export interface LinksModel {
   title: string;
-  icons: IconsEnum;
+  icons: React.ReactNode;
   path: string;
 }

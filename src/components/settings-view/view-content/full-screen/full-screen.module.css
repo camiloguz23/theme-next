@@ -6,6 +6,6 @@
   margin-bottom: 10px;
 
   .icon {
-    color: var(--btnText);
+    fill: var(--btnText);
   }
 }

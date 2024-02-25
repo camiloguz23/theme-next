@@ -2,20 +2,36 @@ import style from './ui-navbar.module.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { type LinksModel } from '@/types';
-import { UiIcon } from '..';
+import { Icons } from '..';
 
 interface Props {
-  links: LinksModel[];
   isCollapse?: boolean;
 }
 
-function UiNavbar({ links, isCollapse }: Props): JSX.Element {
+function UiNavbar({ isCollapse }: Props): JSX.Element {
+  const ROUTES: LinksModel[] = [
+    {
+      title: 'Home',
+      icons: <Icons.Home></Icons.Home>,
+      path: '/'
+    },
+    {
+      title: 'about',
+      icons: <Icons.AboutMe></Icons.AboutMe>,
+      path: '/about'
+    },
+    {
+      title: 'store',
+      icons: <Icons.Store></Icons.Store>,
+      path: '/store'
+    }
+  ];
   const pathname = usePathname();
   return (
     <nav className={style.navbar}>
-      {links.map((item) => (
+      {ROUTES.map((item) => (
         <Link key={item.title} className={`${style.item} ${pathname === item.path && style.active}`} href={item.path}>
-          <UiIcon nameIcon={item.icons} /> {(isCollapse === true) || item.title}
+          {item.icons} {isCollapse === true || item.title}
         </Link>
       ))}
     </nav>
