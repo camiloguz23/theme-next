@@ -5,8 +5,13 @@ import { Icons } from '@/components';
 import { useBoolean } from '@/hook';
 import { UiDrawer } from '@/components/ui-drawer';
 import { UiViewContentSettings } from '@/components/settings-view/view-content';
+import { type DictionaryType } from '@/types';
 
-export const BtnSettings = (): JSX.Element => {
+interface Props {
+  lang: DictionaryType;
+}
+
+export const BtnSettings = ({ lang }: Props): JSX.Element => {
   const openPopover = useBoolean();
   return (
     <>
@@ -14,7 +19,7 @@ export const BtnSettings = (): JSX.Element => {
         <Icons.Settings className={style.btnSetting} />
       </button>
       <UiDrawer open={openPopover.value} onClose={openPopover.onFalse}>
-        <UiViewContentSettings />
+        <UiViewContentSettings lang={lang} />
       </UiDrawer>
     </>
   );

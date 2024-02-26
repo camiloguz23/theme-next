@@ -21,7 +21,7 @@ function UiNavbar({ isCollapse, lang }: Props): JSX.Element {
     {
       title: lang.project,
       icons: <Icons.AboutMe></Icons.AboutMe>,
-      path: '/about'
+      path: '/project'
     }
   ];
   const pathname = usePathname();

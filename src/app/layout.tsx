@@ -16,7 +16,13 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'Jeyson Guzman',
-  description: 'Mi pagina wen de Jeyson Camilo Guzman Rico, donde se muestra las expericiencias y proyectos hechos'
+  description: 'Mi pagina wen de Jeyson Camilo Guzman Rico, donde se muestra las expericiencias y proyectos hechos',
+  icons: [
+    { rel: 'icon', url: '/img/favicon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/img/favicon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/img/favicon.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', url: '/img/favicon.png' }
+  ]
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
@@ -27,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
         <ProviderCustom>
           <ProviderSetting>
             <UiSidebarLayout lang={lang} header={<UiHeader lang={dictionary} />} content={children} />
-            <BtnSettings />
+            <BtnSettings lang={dictionary} />
           </ProviderSetting>
         </ProviderCustom>
       </body>
