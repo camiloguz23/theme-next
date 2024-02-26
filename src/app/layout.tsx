@@ -5,6 +5,7 @@ import { ProviderSetting } from '@/settings';
 import { UiSidebarLayout } from '@/layout';
 import { ProviderCustom } from '@/shared';
 import { BtnSettings, UiHeader } from '@/components';
+import { getDictionary, lang } from '@/translate';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -19,12 +20,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
+  const dictionary = getDictionary();
   return (
-    <html lang='en' className={roboto.className}>
+    <html lang={lang} className={roboto.className}>
       <body>
         <ProviderCustom>
           <ProviderSetting>
-            <UiSidebarLayout header={<UiHeader />} content={children} />
+            <UiSidebarLayout lang={lang} header={<UiHeader lang={dictionary} />} content={children} />
             <BtnSettings />
           </ProviderSetting>
         </ProviderCustom>

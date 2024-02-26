@@ -16,6 +16,9 @@
 
   .nav {
     grid-area: nav;
+    display: flex;
+    justify-content: end;
+    padding: 8px;
   }
 
   .body {

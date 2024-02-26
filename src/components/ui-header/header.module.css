@@ -9,7 +9,7 @@
   }
 
   &.collapse {
-    width: 85px;
+    width: 95px;
   }
 
   .icon {
@@ -20,13 +20,38 @@
     align-items: center;
     padding: 1px;
 
-    .animation {
+    .animation-open {
       animation: rotative 1s ease-in-out;
+    }
+
+    .animation-close {
+      animation: rotativeClose 1s ease-in-out;
     }
   }
 }
 
 @keyframes rotative {
+  0% {
+    transform: rotate(20deg);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotativeClose {
   0% {
     transform: rotate(20deg);
   }
