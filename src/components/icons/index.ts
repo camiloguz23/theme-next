@@ -1,5 +1,5 @@
 export * from './flag';
-export * from './icon-about-me';
+export * from './project';
 export * from './icon-home';
 export * from './store';
 export * from './theme';

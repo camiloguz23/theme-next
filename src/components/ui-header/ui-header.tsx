@@ -15,13 +15,14 @@ export const UiHeader = ({ lang }: Props): JSX.Element => {
   const navBar = useBoolean();
   return (
     <div className={`${style.header} ${navBar.value === true ? style.collapse : style.expand}`}>
-      <span className={style.icon}>
-        <Icons.Menu
-          onClick={navBar.onToggle}
-          className={navBar.value !== null ? style[navBar.value ? 'animation-open' : 'animation-close'] : ''}
-          open={navBar.value === true}
-        />
-      </span>
+      <div className={style.icon}>
+        <button onClick={navBar.onToggle}>
+          <Icons.Menu
+            className={navBar.value !== null ? style[navBar.value ? 'animation-open' : 'animation-close'] : ''}
+            open={navBar.value === true}
+          />
+        </button>
+      </div>
 
       <UiNavbar isCollapse={navBar.value ?? false} lang={lang} />
     </div>

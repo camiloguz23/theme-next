@@ -20,7 +20,7 @@ function UiNavbar({ isCollapse, lang }: Props): JSX.Element {
     },
     {
       title: lang.project,
-      icons: <Icons.AboutMe></Icons.AboutMe>,
+      icons: <Icons.Project />,
       path: '/project'
     }
   ];

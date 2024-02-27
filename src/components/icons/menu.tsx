@@ -2,17 +2,15 @@
 interface Prop {
   className?: string;
   size?: string;
-  onClick?: () => void;
   open: boolean;
 }
 
-export const Menu = ({ className, onClick, size, open }: Prop): JSX.Element => {
+export const Menu = ({ className, size, open }: Prop): JSX.Element => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size ?? '24px'}
       height={size ?? '24px'}
-      onClick={() => onClick?.()}
       className={className}
       viewBox='0 0 24 24'
     >
