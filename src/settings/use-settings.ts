@@ -13,7 +13,9 @@ interface ReturnData {
 
 export const useSettings = (): ReturnData => {
   const { theme } = useSelector((state: RootState) => state.theme);
+
   const dispatch = useDispatch();
+
   const setModeTheme = (value: ThemesType): void => {
     dispatch(setTheme(value));
   };
